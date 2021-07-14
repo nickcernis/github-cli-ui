@@ -4,6 +4,7 @@
   "description": "Use GitHub CLI visually without leaving VS Code.",
   "version": "0.1.0",
   "author": "Nick Cernis",
+  "publisher": "NickCernis",
   "license": "MIT",
   "repository": {
     "type": "git",
