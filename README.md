@@ -57,6 +57,6 @@ If you use a command a lot, consider binding it to a keyboard shortcut.
 2. Search for "Preferences: Open Keyboard Shortcuts".
 3. Search for any supported command and add your own keyboard shortcut:
 
-- gh pr list
-- gh pr checkout
-- gh pr view 
+- github-cli-ui.PRList
+- github-cli-ui.PRCheckout
+- github-cli-ui.PRView
