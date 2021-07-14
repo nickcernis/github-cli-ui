@@ -2,7 +2,7 @@
   "name": "github-cli-ui",
   "displayName": "GitHub CLI UI",
   "description": "Use GitHub CLI visually without leaving VS Code.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Nick Cernis",
   "publisher": "NickCernis",
   "license": "MIT",
