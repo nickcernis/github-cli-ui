@@ -8,15 +8,15 @@ Use GitHub CLI visually without leaving VS Code.
 
 GitHub CLI UI exposes `gh …` commands in VS Code's Command Palette:
 
-<img src="https://github.com/nickcernis/gh-cli-ui/blob/main/docs/images/gh-pr-commands.png?raw=true" alt="GitHub CLI PR commands in the VS Code Command Palette.">
+<img src="https://raw.githubusercontent.com/nickcernis/github-cli-ui/main/docs/images/gh-pr-commands.png" alt="GitHub CLI PR commands in the VS Code Command Palette.">
 
 Run a command such as `gh pr checkout` to display pull requests in a quicklist, complete with filterable author names and draft status:
 
-<img src="https://github.com/nickcernis/gh-cli-ui/blob/main/docs/images/gh-pr-checkout.png?raw=true" alt="GitHub pull requests displayed in a quicklist.">
+<img src="https://raw.githubusercontent.com/nickcernis/github-cli-ui/main/docs/images/gh-pr-checkout.png" alt="GitHub pull requests displayed in a quicklist.">
 
 Choose the PR to checkout by pressing enter and you're done! The plugin ran `gh pr checkout [number of selected PR]` for you and GitHub CLI pulled down and checked out the PR:
 
-<img src="https://github.com/nickcernis/gh-cli-ui/blob/main/docs/images/checkout-out-pr.png?raw=true" alt="The checked out branch name in the VS Code status bar.">
+<img src="https://raw.githubusercontent.com/nickcernis/github-cli-ui/main/docs/images/checked-out-pr.png" alt="The checked out branch name in the VS Code status bar.">
 
 You can check out another local or remote branch at any time. You don't have to do anything extra to undo the steps that GH CLI took.
 
