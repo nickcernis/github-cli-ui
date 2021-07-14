@@ -35,12 +35,12 @@ function list(action: PRAction = PRAction.list) {
   exec(
     `cd ${root} && gh pr list --json=number,title,headRefName,isDraft,author`,
     (err, stdout, stderr) => {
-      const response = JSON.parse(stdout);
-
       if (err) {
         vscode.window.showErrorMessage(`${err}`);
         return;
       }
+
+      const response = JSON.parse(stdout);
 
       if (response.length < 1) {
         showList(
