@@ -14,6 +14,8 @@ import { exec } from "child_process";
 import { getRoot } from "../workspace";
 import { showList, getListItems } from "./pickers";
 
+const gitRootNotFoundMessage = "No git repo found. Open a file in the git directory or initialize the repo.";
+
 enum PRAction {
   list,
   checkout,
@@ -28,7 +30,7 @@ enum PRAction {
 function list(action: PRAction = PRAction.list) {
   const root = getRoot();
   if (!root) {
-    vscode.window.showErrorMessage("Could not find workspace root.");
+    vscode.window.showErrorMessage(gitRootNotFoundMessage);
     return;
   }
 
@@ -61,6 +63,11 @@ function list(action: PRAction = PRAction.list) {
  */
 function checkout(number: number) {
   const root = getRoot();
+  if (!root) {
+    vscode.window.showErrorMessage(gitRootNotFoundMessage);
+    return;
+  }
+
   exec(`cd ${root} && gh pr checkout ${number}`, (err, stdout, stderr) => {
     if (err) {
       vscode.window.showErrorMessage(`${err}`);
@@ -73,6 +80,10 @@ function checkout(number: number) {
  */
 function view(number: number) {
   const root = getRoot();
+  if (!root) {
+    vscode.window.showErrorMessage(gitRootNotFoundMessage);
+    return;
+  }
   exec(`cd ${root} && gh pr view ${number} --web`, (err, stdout, stderr) => {
     if (err) {
       vscode.window.showErrorMessage(`${err}`);
