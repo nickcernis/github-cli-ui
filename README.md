@@ -45,6 +45,7 @@ These commands are supported:
 - `gh pr list` — see a list of open PRs. Press enter to select a PR and choose to check it out or view it online.
 - `gh pr view` — see a list of PRs, then open the selected PR in your browser.
 - `gh pr checkout` — see a list of open PRs, then checkout the selected PR.
+- `gh repo view` — open the current repo in your browser (`--web` is automatically appended). 
 
 Feel free to file issues requesting [other GH CLI features](https://cli.github.com/manual/).
 
@@ -60,3 +61,4 @@ If you use a command a lot, consider binding it to a keyboard shortcut.
 - github-cli-ui.PRList
 - github-cli-ui.PRCheckout
 - github-cli-ui.PRView
+- github-cli-ui.RepoView

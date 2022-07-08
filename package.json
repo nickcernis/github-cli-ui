@@ -2,7 +2,7 @@
   "name": "github-cli-ui",
   "displayName": "GitHub CLI UI",
   "description": "Use GitHub CLI visually without leaving VS Code.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Nick Cernis",
   "publisher": "NickCernis",
   "license": "MIT",
@@ -30,7 +30,8 @@
   "activationEvents": [
     "onCommand:github-cli-ui.PRList",
     "onCommand:github-cli-ui.PRCheckout",
-    "onCommand:github-cli-ui.PRView"
+    "onCommand:github-cli-ui.PRView",
+    "onCommand:github-cli-ui.RepoView"
   ],
   "icon": "icon.png",
   "main": "./out/extension.js",
@@ -47,6 +48,10 @@
       {
         "command": "github-cli-ui.PRView",
         "title": "gh pr view"
+      },
+      {
+        "command": "github-cli-ui.RepoView",
+        "title": "gh repo view"
       }
     ]
   },

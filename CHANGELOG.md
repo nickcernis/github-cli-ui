@@ -2,6 +2,10 @@
 
 All notable changes to the GitHub CLI UI VS Code extension will be documented in this file.
 
+## [0.3.0] - 2022-07-08
+
+- Support the `gh repo view` command to open the current repo. in your browser (`--web` is automatically appended).
+
 ## [0.2.0] - 2022-01-12
 
 - Support projects where the git workspace is in a subfolder, not in the workspace root. Just open a file in the git subfolder before running commands such as `gh pr list`.
