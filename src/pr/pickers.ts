@@ -97,7 +97,7 @@ function doListAction(selectedItem: PRItem, action?: PRAction) {
  */
 function getListItems(data: GitHubPR[]): PRItem[] {
   return data
-    .sort((a, b) => a.number - b.number)
+    .sort((a, b) => b.number - a.number)
     .map((item) => {
       return {
         label: `${item.number} ${item.title}`,
