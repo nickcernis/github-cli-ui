@@ -2,6 +2,10 @@
 
 All notable changes to the GitHub CLI UI VS Code extension will be documented in this file.
 
+## [0.3.2] - 2022-11-22
+
+- Fix bug where actions could fail if repository parent directories contain spaces.
+
 ## [0.3.1] - 2022-07-20
 
 - Sort pull requests by highest number first instead of lowest first when running `gh pr` commands, to match the behaviour of GitHub CLI.
