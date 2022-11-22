@@ -19,7 +19,7 @@
      vscode.window.showErrorMessage(gitRootNotFoundMessage);
      return;
    }
-   exec(`cd ${root} && gh repo view --web`, (err, stdout, stderr) => {
+   exec(`cd "${root}" && gh repo view --web`, (err, stdout, stderr) => {
      if (err) {
        vscode.window.showErrorMessage(`${err}`);
      }

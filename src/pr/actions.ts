@@ -35,7 +35,7 @@ function list(action: PRAction = PRAction.list) {
   }
 
   exec(
-    `cd ${root} && gh pr list --json=number,title,headRefName,isDraft,author`,
+    `cd "${root}" && gh pr list --json=number,title,headRefName,isDraft,author`,
     (err, stdout, stderr) => {
       if (err) {
         vscode.window.showErrorMessage(`${err}`);
@@ -68,7 +68,7 @@ function checkout(number: number) {
     return;
   }
 
-  exec(`cd ${root} && gh pr checkout ${number}`, (err, stdout, stderr) => {
+  exec(`cd "${root}" && gh pr checkout ${number}`, (err, stdout, stderr) => {
     if (err) {
       vscode.window.showErrorMessage(`${err}`);
     }
@@ -84,7 +84,7 @@ function view(number: number) {
     vscode.window.showErrorMessage(gitRootNotFoundMessage);
     return;
   }
-  exec(`cd ${root} && gh pr view ${number} --web`, (err, stdout, stderr) => {
+  exec(`cd "${root}" && gh pr view ${number} --web`, (err, stdout, stderr) => {
     if (err) {
       vscode.window.showErrorMessage(`${err}`);
     }

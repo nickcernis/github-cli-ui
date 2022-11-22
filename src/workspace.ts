@@ -4,7 +4,7 @@ import * as vscode from "vscode";
  * Get the active git repository root URI.
  * See https://github.com/microsoft/vscode/blob/main/extensions/git/src/api/git.d.ts
  */
-function getRoot(): string | undefined {   
+function getRoot(): string | undefined {
   const gitExtension = vscode.extensions.getExtension('vscode.git')?.exports;
   const git = gitExtension.getAPI(1);
 
