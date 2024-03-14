@@ -46,6 +46,10 @@
         "title": "gh pr checkout"
       },
       {
+        "command": "github-cli-ui.PRCreate",
+        "title": "gh pr create"
+      },
+      {
         "command": "github-cli-ui.PRView",
         "title": "gh pr view"
       },

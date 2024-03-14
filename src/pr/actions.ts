@@ -5,8 +5,6 @@
  * - https://cli.github.com/manual/gh_pr_list
  * - https://cli.github.com/manual/gh_pr_checkout
  * - https://cli.github.com/manual/gh_pr_view
- *
- * Wishlist:
  * - https://cli.github.com/manual/gh_pr_create
  */
 import * as vscode from "vscode";
@@ -20,6 +18,7 @@ enum PRAction {
   list,
   checkout,
   view,
+  create,
   empty,
   options,
 }
@@ -76,6 +75,24 @@ function checkout(number: number) {
 }
 
 /**
+ * Create a PR request for the current branch via the browser.
+ */
+function create() {
+  const root = getRoot();
+  if (!root) {
+    vscode.window.showErrorMessage(gitRootNotFoundMessage);
+    return;
+  }
+  console.log('running gh pr create --web');
+
+  exec(`cd "${root}" && gh pr create --web`, (err, stdout, stderr) => {
+    if (err) {
+      vscode.window.showErrorMessage(`${err}`);
+    }
+  });
+}
+
+/**
  * View a GitHub pull request in a browser.
  */
 function view(number: number) {
@@ -91,4 +108,4 @@ function view(number: number) {
   });
 }
 
-export { list, checkout, view, PRAction };
+export { list, checkout, create, view, PRAction };
