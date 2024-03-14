@@ -2,6 +2,10 @@
 
 All notable changes to the GitHub CLI UI VS Code extension will be documented in this file.
 
+## [0.4.0] - 2024-03-14
+
+- Add `gh pr create` command (which automatically appends `--web` to let you create a PR in your browser from the current branch, which must already be pushed to the remote).
+
 ## [0.3.2] - 2022-11-22
 
 - Fix bug where actions could fail if repository parent directories contain spaces.
